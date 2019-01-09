@@ -1,0 +1,6 @@
+#!/bin/bash
+set -eu
+IN="$1"
+cp "$IN" "$IN.tmp"
+/L/Dropbox/repos/ipynb_output_filter/ipynb_output_filter.py <"$IN.tmp" > "$IN"
+rm "$IN.tmp"
