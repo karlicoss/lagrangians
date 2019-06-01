@@ -1,0 +1,6 @@
+#!/bin/bash
+# configures nbstripout to filter ein's tags. they are hardcoded in the source code, sadly :( 
+# note that this uses patched version of nbstripout! read this https://github.com/kynan/nbstripout/issues/95 for more infomation
+set -eu
+
+git config filter.nbstripout.extrakeys 'cell.metadata.autoscroll cell.metadata.ein.hycell cell.metadata.ein.tags cell.metadata.slideshow'
